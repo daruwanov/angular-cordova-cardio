@@ -2,6 +2,7 @@
 Angular wrapping for cordova cardIO plugin (http://plugins.cordova.io/#/package/com.keepe.cardio)
 
  - ``` $ cordova plugin add https://github.com/vkeepe/card.io.git ``` - To install cordova module
+ - See more information about how to configure cordova plugin in config xml for Android
  
 Module provide next functionallity
 
