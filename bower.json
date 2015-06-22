@@ -1,0 +1,29 @@
+{
+  "name": "angular-cordova-cardio",
+  "version": "0.0.2",
+  "homepage": "https://github.com/daruwanov/angular-cordova-cardio",
+  "authors": [
+    "Dmytro Arushanov <daruwanov@gmail.com>"
+  ],
+  "description": "Angular wrapper for cordova card.io plugin",
+  "main": "./dist/ngCardIO.js",
+  "keywords": [
+    "card.io",
+    "card-io",
+    "credit",
+    "card",
+    "scan",
+    "cordova"
+  ],
+  "dependencies": {
+    "angular": ">= 1.2.23"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
