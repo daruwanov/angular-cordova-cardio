@@ -1,12 +1,12 @@
 {
   "name": "angular-cordova-cardio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/daruwanov/angular-cordova-cardio",
   "authors": [
     "Dmytro Arushanov <daruwanov@gmail.com>"
   ],
   "description": "Angular wrapper for cordova card.io plugin",
-  "main": "./dist/ngCardIO.js",
+  "main": "/dist/ngCardIO.js",
   "keywords": [
     "card.io",
     "card-io",
