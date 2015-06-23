@@ -14,6 +14,7 @@
         "card_number",
         "expiry_month",
         "expiry_year",
+        "short_expiry_year",
         "cvv",
         "zip"
       ];
@@ -76,7 +77,15 @@
                 var respData = {};
                 for (var i = 0, len = defaultRespFields.length; i < len; i++) {
                   var field = defaultRespFields[i];
-                  respData[field] = response[field] || "";
+
+                  if (field == "short_expiry_year") {
+                    respData[field] = String(response['expiry_year']).substr(
+                      2, 2
+                    )
+                    || "";
+                  } else {
+                    respData[field] = response[field] || "";
+                  }
                 }
                 deferred.resolve(respData);
               },
