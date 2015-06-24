@@ -74,20 +74,27 @@
             CardIO.scan(
               defaultScanConfig,
               function (response) {
-                var respData = {};
-                for (var i = 0, len = defaultRespFields.length; i < len; i++) {
-                  var field = defaultRespFields[i];
 
-                  if (field == "short_expiry_year") {
-                    respData[field] = String(response['expiry_year']).substr(
-                      2, 2
-                    )
-                    || "";
-                  } else {
-                    respData[field] = response[field] || "";
+                if (response == null) {
+                  deferred.reject(null);
+                } else {
+
+                  var respData = {};
+                  for (
+                    var i = 0, len = defaultRespFields.length; i < len; i++) {
+                    var field = defaultRespFields[i];
+
+                    if (field == "short_expiry_year") {
+                      respData[field] = String(response['expiry_year']).substr(
+                        2, 2
+                      )
+                      || "";
+                    } else {
+                      respData[field] = response[field] || "";
+                    }
                   }
+                  deferred.resolve(respData);
                 }
-                deferred.resolve(respData);
               },
               function () {
                 deferred.reject(null);
