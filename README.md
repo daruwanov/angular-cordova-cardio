@@ -6,6 +6,12 @@ This plugin allows you to scan credit cards in your mobile app
 $ cordova plugin add https://github.com/vkeepe/card.io.git
 ```
 
+###Android
+Before you build in release mode, make sure to adjust your proguard configuration by adding the following to proguard.cnf:
+ - keep class io.card.** { *; }
+ - keep class com.keepe.** { *; }
+ - keepclassmembers class io.card.** { *;}
+
 Module provide next functionality:
 
 ```javascript
@@ -77,14 +83,31 @@ Module provide next functionality:
 ````
 
 
-```
-$cordovaNgCardIO.canCard().then(
-        function (response) {
-          alert(JSON.stringify(response));
-        }
-      );
+```javascript
+ $cordovaNgCardIO.canCard()
+ /**
+  * Starting scan dialog.
+  * Return a promise.
+  *
+  * Plugin request access to camera
+  * If we will allow plugin will use camera to scan our card
+  * If we will not allow plugin will use manually entering of data
+  * If Plugin could not scan some data, he will ask us to enter this data
+  * Cvv always entering manually
+  **/
 ```
 
+```javascript
+     $cordovaNgCardIO.scanCard()
+        .then(function (response) {
+                //Success response - it`s an object with card data
+              },
+              function (response) {
+                //We will go there only when user cancel a scanning.
+                //response always null 
+              }
+        );
+```
 
  
  
