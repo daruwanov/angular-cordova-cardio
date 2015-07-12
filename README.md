@@ -1,14 +1,4 @@
----
-layout: docs-plugins
-title: ngCordova - Document and Examples - by the Ionic Framework Team
-
-plugin-name: $cordovaNgCardIO
-source:  https://github.com/driftyco/ng-cordova/blob/master/src/plugins/cardIO.js
-official-docs:  https://github.com/daruwanov/angular-cordova-cardio
-icon-apple: true
-icon-android: true
----
-
+#angular-cordova-cardio
 
 This plugin allows you to scan credit cards in your mobile app
 
@@ -50,14 +40,14 @@ Module provide next functionality:
     );
 ```
 
-- ```javascript
+```javascript
  $cordovaNgCardIOProvider.setCardIOResponseFields()
  /**
   * Create config of fields which will return after scanning.
   * Use in config block of your app.
   * You can pass, only fields which values you want to get back in response.
   **/
- ```
+```
 
 ```javascript
     /**
