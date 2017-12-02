@@ -84,7 +84,7 @@ Module provide next functionality:
 
 
 ```javascript
- $cordovaNgCardIO.canCard()
+ $cordovaNgCardIO.scanCard()
  /**
   * Starting scan dialog.
   * Return a promise.
@@ -104,10 +104,7 @@ Module provide next functionality:
               },
               function (response) {
                 //We will go there only when user cancel a scanning.
-                //response always null 
+                //response always null
               }
         );
 ```
-
- 
- 
